@@ -12,9 +12,9 @@ const fetchBooks = async ({ queryKey }) => {
 };
 
 const Bookstore = () => {
-  const [searchTerm, setSearchTerm] = useState("harry potter");
-  const [maxResults, setMaxResults] = useState(10);
-  const [queryTerm, setQueryTerm] = useState(2);
+  const [searchTerm, setSearchTerm] = useState("Harry Potter");
+  const [maxResults, setMaxResults] = useState(30);
+  const [queryTerm, setQueryTerm] = useState("Harry Potter");
   const inputRef = useRef(null);
 
   const { data, isLoading, error, refetch } = useQuery({
@@ -33,8 +33,8 @@ const Bookstore = () => {
   };
 
   const makeQuery = () => {
-    setQueryTerm(searchTerm);
-    refetch();
+  setQueryTerm(searchTerm);
+      refetch()
   };
 
   return (
